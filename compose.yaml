@@ -1,0 +1,13 @@
+
+services:
+  backend:
+    image: krshna12/insurance-premium-api:latest
+    ports:
+      - "8000:8000"
+
+  frontend:
+    image: krshna12/insurance-premium-frontend:latest
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
